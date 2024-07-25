@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&display=swap');
+
+/* Common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    padding: 100px 0;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(197, 152, 255, 1) 0%, rgba(163, 129, 255, 1) 100%);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* App appearance */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.chat-wrap {
+    display: flex;
+    height: 700px;
+}
+
+.chat-list {
+    flex-basis: 35%;
+    background-color: #222225;
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid #161618;
+}
+
+.chat-header-history-container {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    /* flex-basis: 15%; */
+    padding: 20px 30px;
+    background-color: #222225;
+}
+
+.chat-history {
+    /* flex-basis: 85%; */
+    padding: 30px;
+    background-color: #161618;
+    border-right: 1px solid #161618;
+    overflow-y: scroll;
+}
+
+.chat-history::-webkit-scrollbar {
+    width: 10px;
+    background-color: #222225;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(197, 152, 255, 1) 0%, rgba(163, 129, 255, 1) 100%);
+    transition: .2s 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.chat-history::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(197, 152, 255, .8) 0%, rgba(163, 129, 255, .8) 100%);
+}
+
+/* MessageHistory component */
+.chat-history-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+/* ChatHeader component */
+.chat-header-container {
+    display: flex;
+    align-items: center;
+}
+
+.chat-header-online {
+    padding: 4px;
+    background-color: #23F7DD;
+    border-radius: 50%;
+}
+
+.chat-header-avatar {
+    padding: 2px;
+    max-width: 60px;
+    height: 100%;
+    background-color: #222225;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.chat-header-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 20px;
+}
+
+.chat-header-name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.chat-header-counter {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .5);
+}
+
+.chat-header-star-icon {
+    max-width: 25px;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Response component */
+.response {
+    margin-bottom: 30px;
+}
+
+.response-container {
+    margin-left: auto;
+    padding: 25px;
+    width: 80%;
+    background-color: #222225;
+    border-radius: 10px;
+}
+
+.response-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.response-name-online-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.response-name {
+    margin-right: 7px;
+}
+
+.response-text {
+    line-height: 24px;
+}
+
+/* Message component */
+.message {
+    margin-bottom: 30px;
+}
+
+.message-container {
+    margin-right: auto;
+    padding: 25px;
+    width: 80%;
+    background: linear-gradient(90deg, rgba(197, 152, 255, 1) 0%, rgba(163, 129, 255, 1) 100%);
+    border-radius: 10px;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.message-name-online-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.message-name {
+    margin-right: 7px;
+}
+
+.message-text {
+    line-height: 24px;
+}
+
+/* Typing component */
+.typing {
+    margin-bottom: 30px;
+}
+
+.typing-container {
+    width: 80%;
+}
+
+.typing-loader {
+    display: flex;
+}
+
+.circle-1,
+.circle-2,
+.circle-3 {
+    margin-right: 3px;
+    width: 10px;
+    height: 10px;
+    background: rgba(163, 129, 255, 1);
+    border-radius: 50%;
+    animation: loader 1s infinite alternate;
+}
+
+.circle-2 {
+    animation-delay: .2s;
+}
+
+.circle-3 {
+    animation-delay: .6s;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .1;
+    }
+}
+
+/* Other */
+.online-icon {
+    width: 7px;
+    height: 7px;
+    background-color: #23F7DD;
+    border-radius: 50%;
+}
